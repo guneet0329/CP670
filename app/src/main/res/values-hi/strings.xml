@@ -7,4 +7,6 @@
     <string name="login_hint">निवेश</string>
     <string name="password">पासवर्ड डालिये</string>
     <string name="what_does_this_do">इससे क्या होता है</string>
+    <string name="radiobutton">रेडियो बटन</string>
+    <string name="checkbox">चेक बॉक्स</string>
 </resources>
