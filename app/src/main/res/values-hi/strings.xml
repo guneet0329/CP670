@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AndroidAssignments</string>
-    <string name="hello_message">Namaste</string>
-    <string name="ButtonText">I\'m a button</string>
+    <string name="hello_message">नमस्ते</string>
+    <string name="ButtonText">में एक बटन हु</string>
+    <string name="login">लॉगिन आईडी डालिये</string>
+    <string name="login_hint">निवेश</string>
+    <string name="password">पासवर्ड डालिये</string>
+    <string name="what_does_this_do">इससे क्या होता है</string>
 </resources>
