@@ -4,10 +4,18 @@
     <string name="hello_message">नमस्ते</string>
     <string name="ButtonText">में एक बटन हु</string>
     <string name="login">लॉगिन आईडी डालिये</string>
-    <string name="login_hint">निवेश</string>
+    <string name="login_hint">भाग लेने का ईमेल</string>
     <string name="password">पासवर्ड डालिये</string>
     <string name="what_does_this_do">इससे क्या होता है</string>
     <string name="radiobutton">रेडियो बटन</string>
     <string name="checkbox">चेक बॉक्स</string>
     <string name="LoginButtonText">लॉग इन करें</string>
+    <string name="dialog_message">क्या आप गतिविधि ख़त्म करना चाहते हैं?</string>
+    <string name="dialog_title">पुष्टीकरण</string>
+    <string name="ok">हाँ</string>
+    <string name="cancel">नहीं</string>
+    <string name="switch_on">स्विच चालू है</string>
+    <string name="switch_off">स्विच ऑफ है</string>
+    <string name="sent_response">मेरी जानकारी साझा करने के लिए</string>
+    <string name="listItemActivity_msg">ListItemsActivity पारित : </string>
 </resources>

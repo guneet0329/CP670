@@ -3,11 +3,18 @@
     <string name="hello_message">Hello World</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="login">Login</string>
-    <string name="login_hint">login name</string>
+    <string name="login_hint">Login email</string>
     <string name="password">Password</string>
     <string name="what_does_this_do">What does this do?</string>
     <string name="radiobutton">RadioButton</string>
     <string name="checkbox">CheckBox</string>
     <string name="LoginButtonText">Login</string>
-
+    <string name="dialog_message">Do you want to finish the activity?</string>
+    <string name="dialog_title">Confirmation</string>
+    <string name="ok">Yes</string>
+    <string name="cancel">No</string>
+    <string name="switch_on">Switch is On</string>
+    <string name="switch_off">Switch is Off</string>
+    <string name="sent_response">My information to share</string>
+    <string name="listItemActivity_msg">ListItemsActivity passed :</string>
 </resources>
