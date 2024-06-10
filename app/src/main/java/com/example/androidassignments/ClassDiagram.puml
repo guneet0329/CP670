@@ -1,0 +1,68 @@
+@startuml
+
+package com.example.androidassignments {
+
+    class LoginActivity {
+        + onCreate(Bundle savedInstanceState): void
+        + print(String message): void
+        + onResume(): void
+        + onStart(): void
+        + onPause(): void
+        + onStop(): void
+        + onDestroy(): void
+    }
+
+    class ChatWindow {
+        + ListView listView
+        + EditText chatInput
+        + Button sendButton
+        + ArrayList<String> chatMessages
+        - ChatAdapter messageAdapter
+        + onCreate(Bundle savedInstanceState): void
+        + onOptionsItemSelected(MenuItem item): boolean
+        + onSupportNavigateUp(): boolean
+
+        class ChatAdapter {
+            + ChatAdapter(ChatWindow context)
+            + getCount(): int
+            + getItem(int position): String
+            + getView(int position, View convertView, ViewGroup parent): View
+        }
+    }
+
+    class ListItemsActivity {
+        - static final String TAG
+        - static final int REQUEST_IMAGE_CAPTURE
+        - static final int REQUEST_CAMERA_PERMISSION
+        - ImageButton imageButton
+        + onCreate(Bundle savedInstanceState): void
+        + onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults): void
+        + openCamera(): void
+        + onActivityResult(int requestCode, int resultCode, Intent data): void
+        + print(String message): void
+        + onResume(): void
+        + onStart(): void
+        + onPause(): void
+        + onStop(): void
+        + onDestroy(): void
+    }
+
+    class MainActivity {
+        - static final String TAG
+        - static final String ACTIVITY_NAME
+        + onCreate(Bundle savedInstanceState): void
+        + onActivityResult(int requestCode, int resultCode, Intent data): void
+        + print(String message): void
+        + onResume(): void
+        + onStart(): void
+        + onPause(): void
+        + onStop(): void
+        + onDestroy(): void
+    }
+
+    ChatWindow "1" *-- "1" ChatWindow::ChatAdapter
+    MainActivity "1" --> "1" ListItemsActivity
+    MainActivity "1" --> "1" ChatWindow
+}
+
+@enduml
