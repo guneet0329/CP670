@@ -1,7 +1,5 @@
 package com.example.androidassignments;
 
-import static androidx.constraintlayout.widget.Constraints.TAG;
-
 import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -33,9 +31,9 @@ import java.util.Objects;
 public class ListItemsActivity extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
-    private static final int REQUEST_IMAGE_CAPTURE = 1;
-    private static final int REQUEST_CAMERA_PERMISSION = 200;
-    private ImageButton imageButton;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    static final int REQUEST_CAMERA_PERMISSION = 200;
+    ImageButton imageButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,16 +20,16 @@ import java.util.ArrayList;
 
 public class ChatWindow extends AppCompatActivity {
 
-    private ListView listView;
-    private EditText chatInput;
-    private Button sendButton;
-    private ArrayList<String> chatMessages;
-    private ChatAdapter messageAdapter;
+    ListView listView;
+    EditText chatInput;
+    Button sendButton;
+    public ArrayList<String> chatMessages;
+    ChatAdapter messageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_chat_window);
 
         if(getSupportActionBar() != null)
@@ -61,9 +60,11 @@ public class ChatWindow extends AppCompatActivity {
         });
     }
 
+    public ArrayList<String> getChatMessages() {
+        return chatMessages;
+    }
 
-
-    private class ChatAdapter extends ArrayAdapter<String> {
+    protected class ChatAdapter extends ArrayAdapter<String> {
 
         public ChatAdapter(ChatWindow context) {
             super(context, 0, chatMessages);
