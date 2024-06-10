@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -18,6 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
+    private static final String ACTIVITY_NAME = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +33,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button mainButton = findViewById(R.id.mainButton);
-
+        Button chatButton = findViewById(R.id.chatButton);
         mainButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ListItemsActivity.class);
             startActivityForResult(intent, 10);
         });
+
+        chatButton.setOnClickListener(v -> {
+            Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+            Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+            startActivity(intent);
+        });
+        
 
     }
 

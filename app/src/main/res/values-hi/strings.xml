@@ -18,4 +18,6 @@
     <string name="switch_off">स्विच ऑफ है</string>
     <string name="sent_response">मेरी जानकारी साझा करने के लिए</string>
     <string name="listItemActivity_msg">ListItemsActivity पारित : </string>
+    <string name="ChatButtonText">बातचीत शुरू कीजिए</string>
+    <string name="sendButton">भेजना</string>
 </resources>

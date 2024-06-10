@@ -16,5 +16,7 @@
     <string name="switch_on">Switch is On</string>
     <string name="switch_off">Switch is Off</string>
     <string name="sent_response">My information to share</string>
-    <string name="listItemActivity_msg">ListItemsActivity passed :</string>
+    <string name="listItemActivity_msg">ListItemsActivity passed :</string>\
+    <string name="ChatButtonText">Start Chat</string>
+    <string name="sendButton">Send</string>
 </resources>
