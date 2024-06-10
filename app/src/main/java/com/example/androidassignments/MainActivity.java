@@ -1,12 +1,9 @@
 package com.example.androidassignments;
 
-import static androidx.constraintlayout.widget.Constraints.TAG;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -19,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
-    private static final String ACTIVITY_NAME = "MainActivity";
+    private static final String ACTIVITY_NAME = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

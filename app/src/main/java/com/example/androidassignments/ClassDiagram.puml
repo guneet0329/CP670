@@ -60,9 +60,15 @@ package com.example.androidassignments {
         + onDestroy(): void
     }
 
-    ChatWindow "1" *-- "1" ChatWindow::ChatAdapter
+    LoginActivity "1" --> "1" MainActivity
     MainActivity "1" --> "1" ListItemsActivity
     MainActivity "1" --> "1" ChatWindow
+    MainActivity "1" --> "1" LoginActivity
+    ListItemsActivity "1" --> "1" MainActivity
+    ListItemsActivity "1" --> "1" LoginActivity
+    ChatWindow "1" *-- "1" ChatWindow::ChatAdapter
+    ChatWindow "1" --> "1" MainActivity
+    ChatWindow "1" --> "1" LoginActivity
 }
 
 @enduml
