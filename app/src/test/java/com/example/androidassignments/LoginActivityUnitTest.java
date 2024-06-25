@@ -1,5 +1,11 @@
 package com.example.androidassignments;
 
+import static android.content.Context.MODE_PRIVATE;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static org.robolectric.Shadows.shadowOf;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.Button;
@@ -12,12 +18,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-
-import static android.content.Context.MODE_PRIVATE;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 @RunWith(AndroidJUnit4.class)
 public class LoginActivityUnitTest {

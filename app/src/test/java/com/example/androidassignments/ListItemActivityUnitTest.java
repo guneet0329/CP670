@@ -10,6 +10,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,11 +33,11 @@ import org.mockito.stubbing.Answer;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowApplication;
+import org.robolectric.shadows.ShadowToast;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(sdk = 34)
-public class ListItemsActivityUnitTest {
+@Config(sdk = {Config.OLDEST_SDK, 33})
+public class ListItemActivityUnitTest {
 
     private ListItemsActivity listItemsActivity;
     private ImageButton imageButton;
@@ -54,10 +55,10 @@ public class ListItemsActivityUnitTest {
     @Test
     public void testSwitchToggle() {
         aSwitch.setChecked(true);
-        assertEquals(listItemsActivity.getString(R.string.switch_on), ShadowApplication.getInstance().getLatestToast().getText());
+        assertEquals(listItemsActivity.getString(R.string.switch_on), ShadowToast.getTextOfLatestToast());
 
         aSwitch.setChecked(false);
-        assertEquals(listItemsActivity.getString(R.string.switch_off), ShadowApplication.getInstance().getLatestToast().getText());
+        assertEquals(listItemsActivity.getString(R.string.switch_off), ShadowToast.getTextOfLatestToast());
     }
 
     @Test

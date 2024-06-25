@@ -21,10 +21,10 @@ import java.util.ArrayList;
 public class ChatWindow extends AppCompatActivity {
 
     ListView listView;
-    EditText chatInput;
-    Button sendButton;
+    public EditText chatInput;
+    public Button sendButton;
     public ArrayList<String> chatMessages;
-    ChatAdapter messageAdapter;
+    public ChatAdapter messageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

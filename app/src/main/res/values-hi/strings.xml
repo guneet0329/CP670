@@ -20,4 +20,12 @@
     <string name="listItemActivity_msg">ListItemsActivity पारित : </string>
     <string name="ChatButtonText">बातचीत शुरू कीजिए</string>
     <string name="sendButton">भेजना</string>
+    <string name="ToolbarButtonText">परीक्षण टूलबार</string>
+    <string name="choice1">विकल्प 1</string>
+    <string name="choice2">विकल्प 2</string>
+    <string name="choice3">विकल्प 3</string>
+    <string name="dialog_title_text">क्या आप वापस जाना चाहते हैं?</string>
+    <string name="dialog_positive">हाँ</string>
+    <string name="dialog_negative">नहीं</string>
+    <string name="about">मेरे बारे में</string>
 </resources>

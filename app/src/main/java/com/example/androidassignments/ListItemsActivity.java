@@ -34,6 +34,8 @@ public class ListItemsActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_CAMERA_PERMISSION = 200;
     ImageButton imageButton;
+    private int lastResultCode = Activity.RESULT_CANCELED;
+    private Intent lastResultData = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,8 +121,16 @@ public class ListItemsActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) Objects.requireNonNull(extras).get("data");
             imageButton.setImageBitmap(imageBitmap);
         }
+        this.lastResultCode = resultCode;
+        this.lastResultData = data;
     }
 
+    public int getResultCode() {
+        return lastResultCode;
+    }
+    public Intent getResultData() {
+        return lastResultData;
+    }
     public void print(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }

@@ -18,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments"
         tools:targetApi="31">
+        <activity
+            android:name=".TestToolbar"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
@@ -27,28 +31,18 @@
             android:name=".ChatWindow"
             android:exported="true"
             android:parentActivityName=".LoginActivity"
-            android:windowSoftInputMode="adjustPan">
-
-
-        </activity>
-
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".ListItemsActivity"
             android:exported="true"
-            android:parentActivityName=".LoginActivity">
-        </activity>
-
+            android:parentActivityName=".LoginActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:parentActivityName=".LoginActivity">
-
-        </activity>
-
+            android:parentActivityName=".LoginActivity"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

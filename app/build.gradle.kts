@@ -35,6 +35,11 @@ android {
             isIncludeAndroidResources = true
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
+
+
 }
 dependencies {
 
@@ -43,12 +48,20 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.core)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     testImplementation(libs.robolectric)
     testImplementation(libs.junit)
     testImplementation(libs.mockitoCore)
+    testImplementation(libs.spock.core)
+    testImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.androidx.test.rules)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.mockitoAndroid)
+
 
 }
 jacoco {
