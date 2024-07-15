@@ -32,6 +32,11 @@
     <string name="dialog_positive">Yes</string>
     <string name="dialog_negative">No</string>
     <string name="about">About</string>
+    <string name="WeatherButtonText">Weather Forecast</string>
+    <string name="weather_image">Weather Image</string>
+    <string name="current_temperature">Current Temperature</string>
+    <string name="min_temperature">Min Temperature</string>
+    <string name="max_temperature">Max Temperature</string>
 
 
     <string name="lorem_ipsum">

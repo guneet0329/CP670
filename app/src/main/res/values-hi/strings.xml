@@ -28,4 +28,10 @@
     <string name="dialog_positive">हाँ</string>
     <string name="dialog_negative">नहीं</string>
     <string name="about">मेरे बारे में</string>
+    <string name="WeatherButtonText">मौसम पूर्वानुमान</string>
+    <string name="weather_image">Weather Image</string>
+    <string name="current_temperature">तापमान</string>
+    <string name="min_temperature">न्यूनतम तापमान</string>
+    <string name="max_temperature">अधिकतम तापमान</string>
+
 </resources>

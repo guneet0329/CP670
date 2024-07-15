@@ -4,7 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
     private static final String ACTIVITY_NAME = "LoginActivity";
+    private Spinner citySpinner;
+    private String selectedCity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
         Button mainButton = findViewById(R.id.mainButton);
         Button chatButton = findViewById(R.id.chatButton);
         Button toolbarButton = findViewById(R.id.toolbarButton);
+        Button forecastButton = findViewById(R.id.weatherButton);
+        citySpinner = findViewById(R.id.citySpinner);
+
+        final String[] cities = {"Ottawa", "Toronto", "Vancouver", "Montreal", "Calgary", "Edmonton", "Winnipeg", "Quebec City", "Hamilton", "Kitchener"};
 
         toolbarButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, TestToolbar.class);
@@ -48,10 +59,33 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ChatWindow.class);
             startActivity(intent);
         });
+
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cities);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        citySpinner.setAdapter(adapter);
+
+        citySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedCity = cities[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                selectedCity = cities[0];
+            }
         
 
-    }
+        });
 
+        forecastButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
+            intent.putExtra("city", selectedCity);
+            startActivity(intent);
+        });
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
